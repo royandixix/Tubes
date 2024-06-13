@@ -1,0 +1,385 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* variabel */
+:root{
+    --text-color:#161616 ;
+    --hover-color:hsl(0, 0%, 14%) ;
+    --bg-color:#fff ;
+}
+img{
+    width: 100%;
+}
+body{
+    color: var(--text-color);
+}
+.main{
+    overflow-x: hidden;
+}
+section{
+    padding: 4rem;
+}
+.container{
+    max-width: 968px;
+    width: 100%;
+    margin: auto;
+}
+header{
+    display: block;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header.shadow{
+    background: var(--bg-color);
+    box-shadow: 1px 2px 4px rgb(15 54 55 / 10%);
+    transition: 0.2s
+}
+
+.logo img{
+    width: 41px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.navbar{
+    display: flex;
+    column-gap: 2rem;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    background: linear-gradient(#161616, #dddcfa);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.navbar a:hover{
+    color: var(--text-color);
+}
+
+/* Home */
+.home-content{
+    min-height: 640px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+/* Tambahkan kelas untuk animasi */
+.zoom-out {
+    transition: transform 2s ease-in-out;
+    transform: scale(1); /* Skala awal */
+}
+
+.zoom-out.zoomed {
+    transform: scale(0.7); /* Skala saat zoom out */
+}
+
+.home-text h1{
+    font-size: 3.0rem;
+    margin-bottom: 1rem;
+}
+.home-text p{
+    margin-bottom: 1rem; 
+}
+.btn{
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 16px 24px;
+    border-radius: 0.4rem;
+}
+.btn .bx{
+    font-size: 1.4rem;
+}
+.btn:hover{
+    background: var(--hover-color);
+}
+.heading{
+    text-align: center;
+    font-size: 3.4rem;
+    background: linear-gradient(#161616, #dddcfa);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 2rem;
+}
+.specs-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+.specs-details{
+    display: grid;
+    row-gap: 1.4rem;
+}
+.specs-details .box .bx{
+    font-size: 1.6rem;
+}
+.specs-details .box .h3{
+    font-size: 1rem;
+}
+.specs-details p{
+    margin-top: 0.5rem;
+}
+.shop-container{
+    display: grid;
+    grid-template-columns: repeat(3, 164px);
+    justify-content: center;
+    gap: 3rem;
+}
+.shop-container .box{
+    position: relative;
+    padding: 10px;
+    background: var(--bg-color);
+    box-shadow: 0 5px 8px rgb(15 54 55 / 10%);
+    border-radius: 0.5rem;
+    height: 180px;
+    display: grid;
+}
+.shop-container .box img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.shop-container .box h3{
+    font-size: 0.6rem;
+}
+.shop-container .box span{
+    font-weight: 500;
+    font-size: 1rem;
+}
+.shop-container .box .bx{
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.8rem;
+    padding: 10px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.shop-container .box .bx:hover{
+    background: var(--hover-color);
+}
+.buds-container{
+    display: grid;
+    grid-template-columns: 250px max-content;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    border-radius: 0.5rem;
+}
+.buds-image img{
+    width: 320px;
+}
+.buds-text h2{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.buds-text span{
+    font-weight: 400;
+}
+.buds-text p{
+    margin: 1rem 0 1rem;
+}
+.buds-text .btn:hover{
+    background: hsl(0, 0%, 10%);
+}
+.footer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, auto));
+    gap: 2rem;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+}
+.footer-box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.footer-box a{
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+.social{
+    display: flex;
+    column-gap: 1rem;
+}
+.social .bx{
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.social .bx:hover{
+    background: var(--hover-color);
+}
+
+.home-text.home-img {
+        transition: filter 1s ease-out;
+        filter: blur(5px); /* Efek blur awal sebelum transisi */
+    }
+
+    .home-text.show .home-img.show {
+        filter: blur(0); /* Menghapus efek blur saat transisi selesai */
+    }
+        /* web.css */
+
+    /* Your existing styles */
+
+    /* Example of media query for responsiveness */
+    @media screen and (max-width: 768px) {
+
+        /* Adjustments for smaller screens */
+        .navbar {
+            /* For smaller screens, make the navbar responsive */
+            /* You might want to change the layout, for instance, make it a hamburger menu */
+            /* Example: */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Adjust other elements as needed for smaller screens */
+        /* For instance, adjust image sizes, font sizes, or layout */
+    }
+
+    /* Reset default margins and paddings */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Your existing styles */
+
+    /* Add responsive styles */
+    @media screen and (max-width: 768px) {
+
+        /* Adjustments for smaller screens */
+        .nav {
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            /* Adjust spacing between items */
+        }
+
+        /* Modify font sizes for smaller screens if needed */
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        /* Adjust image sizes */
+        .home-img img,
+        .specs-img img,
+        .buds-image img {
+            width: 100%;
+            /* Make images responsive */
+            height: auto;
+        }
+
+        /* Adjust the layout for the shop section */
+        .shop-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            /* Adjust spacing between boxes */
+        }
+
+        /* Other specific adjustments as needed */
+    }
+
+    /* Add animations */
+
+    /* Animate the home text and image */
+    .home-text,
+    .home-img {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Animate the specs details */
+    .specs-details {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease 0.5s forwards;
+    }
+
+    /* Animate the shop boxes */
+    .shop-container .box {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1s ease forwards;
+        animation-delay: 0.3s;
+    }
+    /* Add responsive styles */
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .navbar {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+    }
+
+    /* Other specific adjustments as needed */
+}
+@ keyframes move {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(50px); }
+    100% { transform: translateX(0); }
+}
+
